@@ -2,14 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Socialia Test</title>
     <style>
-        body { margin: 0; background: #333; overflow: hidden; font-family: sans-serif; }
+        body { margin: 0; background: #333; overflow: hidden; font-family: sans-serif; color: white; }
         #game-container { position: relative; width: 100vw; height: 100vh; }
-        .player { position: absolute; width: 50px; height: 50px; background: #00ff00; border-radius: 50%; transition: 0.1s linear; }
-        #chat-box { position: fixed; bottom: 20px; left: 20px; width: 300px; background: rgba(0,0,0,0.7); color: white; padding: 10px; border-radius: 5px; }
-        #messages { height: 150px; overflow-y: auto; margin-bottom: 10px; font-size: 14px; }
-        input { width: 100%; padding: 5px; box-sizing: border-box; }
+        .player { position: absolute; width: 50px; height: 50px; background: #00ff00; border-radius: 50%; transition: 0.1s linear; border: 2px solid #fff; }
+        #chat-box { position: fixed; bottom: 20px; left: 20px; width: 300px; background: rgba(0,0,0,0.8); padding: 10px; border-radius: 8px; border: 1px solid #555; }
+        #messages { height: 120px; overflow-y: auto; margin-bottom: 10px; font-size: 14px; display: flex; flex-direction: column; }
+        input { width: 100%; padding: 8px; background: #222; border: 1px solid #444; color: white; border-radius: 4px; outline: none; }
     </style>
 </head>
 <body>
@@ -18,10 +19,11 @@
 
     <div id="chat-box">
         <div id="messages"></div>
-        <input type="text" id="chat-input" placeholder="Press Enter to chat...">
+        <input type="text" id="chat-input" placeholder="Type message & hit Enter...">
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    
     <script src="script.js"></script>
 </body>
 </html>

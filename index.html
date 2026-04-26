@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Socialia Test</title>
+    <style>
+        body { margin: 0; background: #333; overflow: hidden; font-family: sans-serif; }
+        #game-container { position: relative; width: 100vw; height: 100vh; }
+        .player { position: absolute; width: 50px; height: 50px; background: #00ff00; border-radius: 50%; transition: 0.1s linear; }
+        #chat-box { position: fixed; bottom: 20px; left: 20px; width: 300px; background: rgba(0,0,0,0.7); color: white; padding: 10px; border-radius: 5px; }
+        #messages { height: 150px; overflow-y: auto; margin-bottom: 10px; font-size: 14px; }
+        input { width: 100%; padding: 5px; box-sizing: border-box; }
+    </style>
+</head>
+<body>
+
+    <div id="game-container"></div>
+
+    <div id="chat-box">
+        <div id="messages"></div>
+        <input type="text" id="chat-input" placeholder="Press Enter to chat...">
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="script.js"></script>
+</body>
+</html>
